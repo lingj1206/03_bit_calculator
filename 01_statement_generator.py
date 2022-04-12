@@ -1,1 +1,2 @@
-print("hello world")
+def statement_generator():
+    valid = False
