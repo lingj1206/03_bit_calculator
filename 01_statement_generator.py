@@ -10,4 +10,4 @@ def statement_generator(text, decoration):
     
     return ""
 
-statement_generator("look - stars", "*")
+statement_generator("hello world", "-")
