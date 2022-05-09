@@ -41,6 +41,26 @@ def user_choice():
             print("Sorry, please choose integer, text or image.")
             print()
 
+def num_check(question, low):
+    valid = False
+    while not valid:
+
+        error = ("Please enter a number that is more than zero(or eyual to {})".format(low))
+
+        try:
+
+            response = float(input(question))
+            
+            if response > 0:
+                return response
+
+            else:
+                print(error)
+                print()
+        
+        except ValueError:
+            print(error)
+
 
 statement_generator("Bit calculator for Intergers, Text & Images", "-")
 
@@ -49,3 +69,12 @@ while keep_going == "":
 
         data_type = user_choice()
         print("You chose", data_type)
+
+        if data_type =="integer":
+            var_interger = num_check("Enter an integer: ", 0)
+
+        elif data_type =="image width":
+            image_width = num_check("Enter the width: 0, 1")
+        
+        elif data_type =="image height":
+            image_height = num_check("Enter the height: 0, 1")
