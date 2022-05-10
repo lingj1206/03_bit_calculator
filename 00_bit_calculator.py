@@ -40,12 +40,12 @@ def user_choice():
         else:
             print("Sorry, please choose integer, text or image.")
             print()
-
+print()
 def num_check(question, low):
     valid = False
     while not valid:
 
-        error = ("Please enter a number that is more than zero(or eyual to {})".format(low))
+        error = ("Please enter a number that is more than zero(or equal to {})".format(low))
 
         try:
 
