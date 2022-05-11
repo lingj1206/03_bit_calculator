@@ -73,7 +73,7 @@ while keep_going == "":
             var_interger = num_check("Enter an integer: ", 0)
 
         elif data_type =="image width":
-            image_width = num_check("Enter the width: 0, 1")
+            image_width = num_check("Enter the width: ", 1)
         
         elif data_type =="image height":
-            image_height = num_check("Enter the height: 0, 1")
+            image_height = num_check("Enter the height: ", 1)
