@@ -12,3 +12,4 @@ def text_bits():
     print()
 
     return ""
+text_bits()
