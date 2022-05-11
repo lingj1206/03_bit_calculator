@@ -77,3 +77,6 @@ while keep_going == "":
         
         elif data_type =="image height":
             image_height = num_check("Enter the height: ", 1)
+
+        else:
+            var_text = input("enter some text")
