@@ -26,4 +26,10 @@ def image_bits () :
     num_pixels = image_width * image_height
 
     num_bits = num_pixels * 24
-     
+
+    print()
+    print("# of pixels = {} x {} = {}".format(image_height,
+                                             image_width, num_pixels))
+print()
+
+image_bits()
