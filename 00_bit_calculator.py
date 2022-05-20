@@ -40,6 +40,7 @@ def user_choice():
         else:
             print("Sorry, please choose integer, text or image.")
             print()
+            
 def num_check(question, low):
     valid = False
     while not valid:
