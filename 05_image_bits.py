@@ -19,7 +19,7 @@ def num_check(question, low):
         except ValueError:
             print(error)
 
-def image_bits () :
+def image_bits ():
     image_width = num_check("Image width? ", 1)
     image_height = num_check("Image height? ", 1)
 

@@ -40,7 +40,7 @@ def user_choice():
         else:
             print("Sorry, please choose integer, text or image.")
             print()
-            
+
 def num_check(question, low):
     valid = False
     while not valid:
@@ -61,23 +61,66 @@ def num_check(question, low):
         except ValueError:
             print(error)
 
+def text_bits():
+
+    print()
+    var_text = input("Enter some text ")
+    print()
+    var_length = len(var_text)
+    num_bits = 8 * var_length
+
+    print()
+    print("\'{}\' has {} characters ...".format(var_text, var_length))
+    print("# of bits is {} x 8...".format(var_length))
+    print("We need {} bits to represent {}".format(num_bits, var_text))
+    print()
+
+    return ""
+
+def image_bits ():
+    image_width = num_check("Image width? ", 1)
+    image_height = num_check("Image height? ", 1)
+
+    num_pixels = image_width * image_height
+
+    num_bits = num_pixels * 24
+
+    print()
+    print("# of pixels = {} x {} = {}".format(image_height,
+                                             image_width, num_pixels))
+
+def int_bits():
+
+    var_integer = num_check ("Please enter an integer: ", 0)
+    var_binary = "{0:b}".forq(var_integer)
+    
+    num_bits = len(var_binary)
+    
+    print()
+    print("{} in binaryin {}".format(var_integer, var_binary))
+    print("#of bits is {}".format(num_bits))
+    print()
+
+    return ""
 
 statement_generator("Bit calculator for Intergers, Text & Images", "-")
 
 keep_going = ""
 while keep_going == "":
 
-        data_type = user_choice()
-        print("You chose", data_type)
+    data_type = user_choice()
+    print("You chose", data_type)
 
-        if data_type =="integer":
-            var_interger = num_check("Enter an integer: ", 0)
+    if data_type =="integer":
+       int_bits()
 
-        elif data_type =="image width":
-            image_width = num_check("Enter the width: ", 1)
+    elif data_type =="image ":
+        image_bits()
         
-        elif data_type =="image height":
-            image_height = num_check("Enter the height: ", 1)
 
-        else:
-            var_text = input("enter some text")
+    else:
+        text_bits()
+
+    print()
+    keep_going = ("Press <enter> to continue or any key to quit.")
+    print()
