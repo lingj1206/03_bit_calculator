@@ -86,18 +86,18 @@ def image_bits ():
     num_bits = num_pixels * 24
 
     print()
-    print("# of pixels = {} x {} = {}".format(image_height,
-                                             image_width, num_pixels))
+    print("# of pixels = {} x {} = {}".format(image_height,image_width, num_pixels))
+    print("# of bits is {} x 24 = {}".format(num_pixels, num_bits))
 
 def int_bits():
 
     var_integer = num_check ("Please enter an integer: ", 0)
-    var_binary = "{0:b}".forq(var_integer)
+    var_binary = "{0:b}".format(var_integer)
     
     num_bits = len(var_binary)
     
     print()
-    print("{} in binaryin {}".format(var_integer, var_binary))
+    print("{} in binary in {}".format(var_integer, var_binary))
     print("#of bits is {}".format(num_bits))
     print()
 
@@ -114,13 +114,12 @@ while keep_going == "":
     if data_type =="integer":
        int_bits()
 
-    elif data_type =="image ":
+    elif data_type =="image":
         image_bits()
         
-
     else:
         text_bits()
 
     print()
-    keep_going = ("Press <enter> to continue or any key to quit.")
+    keep_going = input("Press <enter> to continue or any key to quit.")
     print()
