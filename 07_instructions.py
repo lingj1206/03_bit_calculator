@@ -22,3 +22,5 @@ def instructions():
     print()
 
     return ""
+
+instructions()

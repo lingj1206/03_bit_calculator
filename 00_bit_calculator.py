@@ -10,6 +10,19 @@ def statement_generator(text, decoration):
     
     return ""
 
+def instructions():
+
+    statement_generator("Instructions / Information", "=")
+    print()
+    print("Please choosea data type (image / text / integer)")
+    print()
+    print("this program assumes that images are being represented in 24bit colour (ie: 24 bits per pixel). For text, we assume that ascii encoding is being used (8 bits per character).")
+    print()
+    print("complete as many calculations as necessary, pressing <enter> at the end of each calculation or any key to quit.")
+    print()
+
+    return ""
+
 def user_choice():
 
     text_ok = ["text", "t", "txt"]
@@ -104,6 +117,12 @@ def int_bits():
     return ""
 
 statement_generator("Bit calculator for Intergers, Text & Images", "-")
+
+
+first_time = input("Press <enter> to see the instructions or any key to continue")
+
+if first_time =="":
+    instructions()
 
 keep_going = ""
 while keep_going == "":
